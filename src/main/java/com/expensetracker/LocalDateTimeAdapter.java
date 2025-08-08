@@ -23,7 +23,7 @@ public class LocalDateTimeAdapter extends TypeAdapter<LocalDateTime> {
     }
 
     @Override
-    public void read(JsonReader in) throws IOException {
+    public LocalDateTime read(JsonReader in) throws IOException {
         if (in.peek() == com.google.gson.stream.JsonToken.NULL) {
             in.nextNull();
             return null;
